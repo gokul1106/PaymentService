@@ -8,7 +8,11 @@ public class PaymentGatewayStrategyChooser {
     @Autowired
     private RazorPayPaymentGateway razorPayPaymentGateway;
 
+    @Autowired
+    private StripePaymentGateway stripePaymentGateway;
+
     public PaymentGateway getBestPaymentGatewayStrategy(){
-        return razorPayPaymentGateway;
+        //return razorPayPaymentGateway;
+        return stripePaymentGateway;
     }
 }
